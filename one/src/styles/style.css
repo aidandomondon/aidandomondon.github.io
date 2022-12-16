@@ -1,0 +1,29 @@
+/** Changes the background color. */
+html {
+    background-color: white
+}
+
+body {
+    color : black;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-image: url(../../res/GraphBackground.png)
+}
+
+/* Styles the top bar */
+#topBar {
+    top: 40px
+    bottom: 20;
+    background-color: black;
+}
+
+/* Gives all sections a bounding box */
+.Section {
+    margin: 20px;
+    border: 5px solid black;
+    padding: 20px;
+}
+
+/* Highlights a section in gray when hovered over. */
+.Section:hover {
+    background-color: lightgray;
+}
