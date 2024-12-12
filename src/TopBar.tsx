@@ -3,9 +3,9 @@ import Container from '@mui/material/Container';
 
 export default function TopBar(): React.ReactElement {
     const style: React.CSSProperties = {
-        position: 'fixed',
+        position: 'sticky',
         top: 0,
-        padding: '1em',
+        padding: '0.3em',
         color: 'darkorchid',
         borderBottom: 'solid',
         borderBottomColor: 'grey'
