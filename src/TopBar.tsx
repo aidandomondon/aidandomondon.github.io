@@ -6,9 +6,9 @@ export default function TopBar(): React.ReactElement {
         position: 'sticky',
         top: 0,
         padding: '0.3em',
-        color: 'darkorchid',
-        borderBottom: 'solid',
-        borderBottomColor: 'grey'
+        backgroundColor: 'white',
+        opacity: 0.5,
+        color: 'black',
     }
     return (
         <Container style={style} maxWidth={false}><h1>Aidan Domondon</h1></Container>

@@ -4,23 +4,24 @@ import Container from '@mui/material/Container';
 export default function Preface(): React.ReactElement {
     const style: React.CSSProperties = {
         textAlign: 'left',
-        fontSize: '0.75em',
-        padding: '1em',
-        color: 'darkorchid',
-        borderBottomColor: 'grey'
+        fontSize: '2.5em',
+        backgroundColor: 'black',
+        justifyContent: 'top',
+        letterSpacing: -8,
+        lineHeight: 0.75,
+        opacity: 0.5,
+        color: 'white',
+        padding: 0
     }
     return (
         <Container style={style} maxWidth={false}>
-            <h2>Preface</h2>
-            <p style={{ color: 'grey' }}>
-                I’m Aidan, a fourth year student at Northeastern University studying Computer Science and Mathematics.
-                <br />
-                <br />
-                I tried to design this website to be a convenient way for you to explore what I have to offer and to see if it aligns with what you’re looking for.
-                <br />
-                <br />
-                If you have any ideas for how this experience could be improved, I’d be happy to hear them.
-            </p>
+            <h2 style={{marginLeft: -3, marginTop: -3, marginBottom: -1.5}}>
+                Senior
+                <br/>
+                fromNORTHEASTERNuniversity
+                <br/>
+                studyingCOMPsci&Math
+            </h2>
         </Container>
     )
 }
