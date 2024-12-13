@@ -7,30 +7,38 @@ export interface TabProps {
     onClick;
 }
 
-const styleObject = (backgroundColor: string, color: string): React.CSSProperties => {
+const baseStyleObject = {
+    marginTop: 0,
+    marginBottom: 0,
+}
+const buttonStyleObject = (backgroundColor: string): React.CSSProperties => {
     return {
-        marginTop: 0,
-        marginBottom: 0,
-        marginLeft: '0.5em',
-        marginRight: '0.5em',
+        ...baseStyleObject,
         backgroundColor: backgroundColor,
-        color: color,
     }
 }
+const buttonTextStyleObject = (color: string): React.CSSProperties => {
+    return {
+        ...baseStyleObject,
+        marginLeft: '0.5em',
+        marginRight: '0.5em',
+        color: color
+    }
+}
+
 export default function Tab(props: TabProps) {
 
-    const [style, setStyle] = useState<React.CSSProperties>(
-        // Specifies that the background color of the button starts black
-        // and the text color of the button starts white
-        styleObject('black', 'white')
-    );
-
+    const [buttonColor, setButtonColor] = useState<string>('black');
+    const [buttonTextColor, setButtonTextColor] = useState<string>('white');
+    
     const focusButtonColorScheme = useCallback(() => {
-        setStyle(styleObject('white', 'black'));
+        setButtonColor('white');
+        setButtonTextColor('black');
     }, []);
 
     const blurButtonColorScheme = useCallback(() => {
-        setStyle(styleObject('black', 'white'));
+        setButtonColor('black');
+        setButtonTextColor('white');
     }, []);
 
     useEffect(() => {
@@ -53,12 +61,12 @@ export default function Tab(props: TabProps) {
 
     return (
         <div
-            style={style}
+            style={buttonStyleObject(buttonColor)}
             onMouseOver={handleMouseOver}
             onMouseLeave={handleMouseLeave}
             onClick={props.onClick}
         >
-            <p style={style}>{props.label}</p>
+            <p style={buttonTextStyleObject(buttonTextColor)}>{props.label}</p>
         </div>
     )
 }
