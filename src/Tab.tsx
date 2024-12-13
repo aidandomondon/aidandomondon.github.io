@@ -41,11 +41,21 @@ export default function Tab(props: TabProps) {
         }
     }, [props.selected, props.tabKey, focusButtonColorScheme, blurButtonColorScheme]);
 
+    const handleMouseOver = useCallback(() => {
+        focusButtonColorScheme();
+    }, [focusButtonColorScheme]);
+
+    const handleMouseLeave = useCallback(() => {
+        if (props.selected !== props.tabKey) {
+            blurButtonColorScheme();
+        }
+    }, [props.selected, props.tabKey, blurButtonColorScheme]);
+
     return (
         <div
             style={style}
-            // onMouseOver={handleMouseOver}
-            // onMouseLeave={handleMouseLeave}
+            onMouseOver={handleMouseOver}
+            onMouseLeave={handleMouseLeave}
             onClick={props.onClick}
         >
             <p style={style}>{props.label}</p>
