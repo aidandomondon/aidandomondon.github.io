@@ -6,7 +6,7 @@ export default function TopBar(): React.ReactElement {
         position: 'sticky',
         top: 0,
         padding: '0.3em',
-        backgroundColor: 'white',
+        // backgroundColor: 'white',
         opacity: 0.5,
         color: 'black',
     }
@@ -15,7 +15,7 @@ export default function TopBar(): React.ReactElement {
             <h1
                 style={{ fontSize: '3em', margin: -5 }}
             >
-                aidan philip estevez domondon
+                aidan domondon
             </h1>
         </Container>
     )

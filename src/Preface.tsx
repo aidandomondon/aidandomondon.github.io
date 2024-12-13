@@ -18,9 +18,9 @@ export default function Preface(): React.ReactElement {
             <h2 style={{marginLeft: -3, marginTop: -3, marginBottom: -1.5}}>
                 Senior
                 <br/>
-                fromNORTHEASTERNuniversity
+                from NORTHEASTERN university
                 <br/>
-                studyingCOMPsci&Math
+                in Compsci & Math
             </h2>
         </Container>
     )
