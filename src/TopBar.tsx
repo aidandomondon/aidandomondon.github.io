@@ -11,6 +11,12 @@ export default function TopBar(): React.ReactElement {
         color: 'black',
     }
     return (
-        <Container style={style} maxWidth={false}><h1>Aidan Domondon</h1></Container>
+        <Container style={style} maxWidth={false}>
+            <h1
+                style={{ fontSize: '3em', margin: -5 }}
+            >
+                aidan philip estevez domondon
+            </h1>
+        </Container>
     )
 }

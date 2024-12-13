@@ -1,8 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Container } from '@mui/material';
-import Timeline from './Timeline';
-import Skills from './Skills';
-import Contact from './Contact';
+import Tab from './Tab';
 import { Stack } from '@mui/material';
 
 export default function TabView() {
@@ -12,12 +10,13 @@ export default function TabView() {
         color: 'white',
         fontSize: '1em',
     }
+    const [selected, setSelected] = useState<number>(0);
     return (
         <Container sx={style} maxWidth={false}>
-            <Stack style={{justifyContent: 'left'}} direction={'row'} padding={0}>
-                <Timeline />
-                <Skills />
-                <Contact />
+            <Stack style={{ justifyContent: 'left' }} direction={'row'} padding={0}>
+                <Tab tabKey={0} label={'Timeline'} selected={selected} onClick={() => setSelected(0)}/>
+                <Tab tabKey={1} label={'Skills'} selected={selected} onClick={() => setSelected(1)}/>
+                <Tab tabKey={2} label={'Contact'} selected={selected} onClick={() => setSelected(2)}/>
             </Stack>
         </Container>
     )
