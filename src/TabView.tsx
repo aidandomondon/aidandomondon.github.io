@@ -10,7 +10,7 @@ export default function TabView() {
         color: 'white',
         fontSize: '1em',
     }
-    const [selected, setSelected] = useState<number>(0);
+    const [selected, setSelected] = useState<number>(-1);
     return (
         <Container sx={style} maxWidth={false}>
             <Stack style={{ justifyContent: 'left' }} direction={'row'} padding={0}>
