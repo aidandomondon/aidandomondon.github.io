@@ -4,6 +4,7 @@ import TopBar from './TopBar';
 import Preface from './Preface';
 import Stack from '@mui/material/Stack';
 import TabView from './TabView';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
 
 const background_image = require('./ai_ml.png');
 
@@ -14,16 +15,24 @@ function App() {
     backgroundSize: 'cover'
   }
 
+  const globalMuiTheme = createTheme({
+    typography: {
+      fontFamily: 'serif',
+    }
+  })
+
   return (
-    <div className="App" style={topLevelDivStyle}>
-      <header className="App-header">
-        <Stack spacing={10}>
-          <TopBar />
-          <Preface />
-          <TabView />
-        </Stack>
-      </header>
-    </div>
+    <ThemeProvider theme={globalMuiTheme}>
+      <div className="App" style={topLevelDivStyle}>
+        <header className="App-header">
+          <Stack spacing={10}>
+            <TopBar />
+            <Preface />
+            <TabView />
+          </Stack>
+        </header>
+      </div>
+    </ThemeProvider>
   );
 }
 

@@ -1,8 +1,16 @@
 import React from 'react';
-import { Tab } from '@mui/material';
 
 export default function Timeline() {
+    const style: React.CSSProperties = {
+        marginTop: 0,
+        marginBottom: 0,
+        marginLeft: '0.5em',
+        marginRight: '0.5em'
+    }
+
     return (
-        <Tab label="Timeline" />
+        <div style={style}>
+            <p style={style}>Timeline</p>
+        </div>
     )
 }
