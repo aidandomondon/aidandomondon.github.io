@@ -5,7 +5,7 @@ export interface TabProps {
     tabKey: number;
     label: string;
     selected: number;
-    onClick;
+    setSelected: React.Dispatch<React.SetStateAction<number>>;
 }
 
 const baseStyleObject = {
@@ -31,7 +31,7 @@ export default function Tab(props: TabProps) {
 
     const [buttonColor, setButtonColor] = useState<string>('black');
     const [buttonTextColor, setButtonTextColor] = useState<string>('white');
-    
+
     const focusButtonColorScheme = useCallback(() => {
         setButtonColor(CUSTOM_WHITE);
         setButtonTextColor(CUSTOM_DARK_BLUE);
@@ -60,12 +60,20 @@ export default function Tab(props: TabProps) {
         }
     }, [props.selected, props.tabKey, blurButtonColorScheme]);
 
+    function handleClick() {
+        if (props.selected !== props.tabKey) {
+            props.setSelected(props.tabKey);
+        } else {
+            props.setSelected(-1);
+        }
+    }
+
     return (
         <div
             style={buttonStyleObject(buttonColor)}
             onMouseOver={handleMouseOver}
             onMouseLeave={handleMouseLeave}
-            onClick={props.onClick}
+            onClick={handleClick}
         >
             <p style={buttonTextStyleObject(buttonTextColor)}>{props.label}</p>
         </div>
