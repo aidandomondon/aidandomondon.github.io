@@ -3,6 +3,9 @@ import { Container } from '@mui/material';
 import Tab from './Tab';
 import { Stack, Box } from '@mui/material';
 import { CUSTOM_DARK_BLUE, CUSTOM_WHITE } from './colors';
+import History from './History';
+import Skills from './Skills';
+import Contact from './Contact';
 
 export default function TabView() {
     const tabButtonBarStyle: React.CSSProperties = {
@@ -30,9 +33,9 @@ export default function TabView() {
             <Box sx={tabContentStyle}>
                 {
                     {
-                        0: <p>a</p>,
-                        1: <p>b</p>,
-                        2: <p>c</p>
+                        0: <History />,
+                        1: <Skills />,
+                        2: <Contact />
                     }[selected]
                 }
             </Box>
