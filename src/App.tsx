@@ -1,18 +1,21 @@
 import React from 'react';
 import './App.css';
-import TopBar from './TopBar';
-import Preface from './Preface';
+import TopBar from './components/TopBar';
+import Preface from './components/Preface';
 import Stack from '@mui/material/Stack';
-import TabView from './TabView';
+import TabView from './components/TabView';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
+import Footer from './components/FooterWithImage';
+import Header from './components/header/Header';
+import IntroCard from './components/header/IntroCard';
 
-const background_image = require('./ai_ml.png');
+// const background_image = require('./ai_ml.png');
 
 function App() {
 
   const topLevelDivStyle = {
-    backgroundImage: `url(${background_image})`,
-    backgroundSize: 'cover'
+    // backgroundImage: `url(${background_image})`,
+    // backgroundSize: 'cover'
   }
 
   const globalMuiTheme = createTheme({
@@ -24,13 +27,17 @@ function App() {
   return (
     <ThemeProvider theme={globalMuiTheme}>
       <div className="App" style={topLevelDivStyle}>
-        <header className="App-header">
+        <Header showName={false}></Header>
+        <IntroCard></IntroCard>
+        {/* <header className="App-header">
           <Stack spacing={10}>
             <TopBar />
             <Preface />
             <TabView />
           </Stack>
-        </header>
+        </header> */}
+        <TabView />
+        <Footer></Footer>
       </div>
     </ThemeProvider>
   );
