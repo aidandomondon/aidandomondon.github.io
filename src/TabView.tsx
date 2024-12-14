@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Container } from '@mui/material';
 import Tab from './Tab';
 import { Stack, Box } from '@mui/material';
-import TabContent from './TabContent';
 import { CUSTOM_DARK_BLUE, CUSTOM_WHITE } from './colors';
 
 export default function TabView() {
@@ -31,9 +30,9 @@ export default function TabView() {
             <Box sx={tabContentStyle}>
                 {
                     {
-                        0: <TabContent tabKey={0} />,
-                        1: <TabContent tabKey={1} />,
-                        2: <TabContent tabKey={2} />
+                        0: <p>a</p>,
+                        1: <p>b</p>,
+                        2: <p>c</p>
                     }[selected]
                 }
             </Box>
