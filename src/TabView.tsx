@@ -26,7 +26,7 @@ export default function TabView() {
             <Container sx={tabButtonBarStyle} maxWidth={false}>
                 <Stack style={{ justifyContent: 'left' }} direction={'row'} padding={0}>
                     <Tab tabKey={0} label={'HISTORY'} selected={selected} setSelected={setSelected} />
-                    <Tab tabKey={1} label={'SKILLS'} selected={selected} setSelected={setSelected} />
+                    {/* <Tab tabKey={1} label={'SKILLS'} selected={selected} setSelected={setSelected} /> */}
                     <Tab tabKey={2} label={'CONTACT'} selected={selected} setSelected={setSelected} />
                 </Stack>
             </Container>
@@ -34,7 +34,7 @@ export default function TabView() {
                 {
                     {
                         0: <History />,
-                        1: <Skills />,
+                        // 1: <Skills />,
                         2: <Contact />
                     }[selected]
                 }
