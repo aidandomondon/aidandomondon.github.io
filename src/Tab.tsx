@@ -11,6 +11,7 @@ export interface TabProps {
 const baseStyleObject = {
     marginTop: 0,
     marginBottom: 0,
+    cursor: 'pointer',
 }
 const buttonStyleObject = (backgroundColor: string): React.CSSProperties => {
     return {
