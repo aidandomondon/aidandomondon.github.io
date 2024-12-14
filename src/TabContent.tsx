@@ -7,7 +7,7 @@ export interface TabContentProps {
 export default function TabContent(props: TabContentProps) {
     return (
         <div>
-            <p>&nbsp;</p>
+            <p>aaa</p>
         </div>
     )
 }
