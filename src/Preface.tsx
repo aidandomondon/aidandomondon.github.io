@@ -1,5 +1,6 @@
 import React from 'react';
 import Container from '@mui/material/Container';
+import { CUSTOM_DARK_BLUE, CUSTOM_WHITE } from './colors';
 
 export default function Preface(): React.ReactElement {
     const style: React.CSSProperties = {
@@ -7,10 +8,10 @@ export default function Preface(): React.ReactElement {
         fontSize: '2.5em',
         // backgroundColor: 'black',
         justifyContent: 'top',
-        letterSpacing: -8,
+        letterSpacing: -7,
         lineHeight: 0.75,
-        opacity: 0.5,
-        color: 'white',
+        opacity: 0.9,
+        color: CUSTOM_WHITE,
         padding: 0
     }
     return (

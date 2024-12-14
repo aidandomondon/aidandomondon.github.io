@@ -3,18 +3,19 @@ import { Container } from '@mui/material';
 import Tab from './Tab';
 import { Stack, Box } from '@mui/material';
 import TabContent from './TabContent';
+import { CUSTOM_DARK_BLUE, CUSTOM_WHITE } from './colors';
 
 export default function TabView() {
     const tabButtonBarStyle: React.CSSProperties = {
-        backgroundColor: 'black',
-        opacity: 0.5,
-        color: 'white',
+        backgroundColor: CUSTOM_DARK_BLUE,
+        opacity: 0.9,
+        color: 'rgb(232, 227, 220)',
         fontSize: '1em',
     }
     const tabContentStyle: React.CSSProperties = {
-        backgroundColor: 'white',
-        opacity: 0.5,
-        color: 'black',
+        backgroundColor: CUSTOM_WHITE,
+        opacity: 0.9,
+        color: CUSTOM_DARK_BLUE,
         fontSize: '1em',
     }
     const [selected, setSelected] = useState<number>(-1);

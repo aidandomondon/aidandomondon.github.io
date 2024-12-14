@@ -1,4 +1,5 @@
 import React, { useState, useCallback, useEffect } from 'react';
+import { CUSTOM_DARK_BLUE, CUSTOM_WHITE } from './colors';
 
 export interface TabProps {
     tabKey: number;
@@ -32,13 +33,13 @@ export default function Tab(props: TabProps) {
     const [buttonTextColor, setButtonTextColor] = useState<string>('white');
     
     const focusButtonColorScheme = useCallback(() => {
-        setButtonColor('white');
-        setButtonTextColor('black');
+        setButtonColor(CUSTOM_WHITE);
+        setButtonTextColor(CUSTOM_DARK_BLUE);
     }, []);
 
     const blurButtonColorScheme = useCallback(() => {
-        setButtonColor('black');
-        setButtonTextColor('white');
+        setButtonColor(CUSTOM_DARK_BLUE);
+        setButtonTextColor(CUSTOM_WHITE);
     }, []);
 
     useEffect(() => {
