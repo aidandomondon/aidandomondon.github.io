@@ -5,7 +5,7 @@ export default function Preface(): React.ReactElement {
     const style: React.CSSProperties = {
         textAlign: 'left',
         fontSize: '2.5em',
-        backgroundColor: 'black',
+        // backgroundColor: 'black',
         justifyContent: 'top',
         letterSpacing: -8,
         lineHeight: 0.75,
@@ -16,11 +16,19 @@ export default function Preface(): React.ReactElement {
     return (
         <Container style={style} maxWidth={false}>
             <h2 style={{marginLeft: -3, marginTop: -3, marginBottom: -1.5}}>
-                Senior
+                SENIOR
                 <br/>
-                from NORTHEASTERN university
+                AT
                 <br/>
-                in Compsci & Math
+                NORTHEASTERN
+                <br/>
+                UNIVERSITY
+                <br/>
+                STUDYING
+                <br/>
+                COMPSCI
+                <br/>
+                &MATH
             </h2>
         </Container>
     )
