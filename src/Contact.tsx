@@ -1,7 +1,6 @@
 import React from 'react';
 import { CUSTOM_DARK_BLUE } from './colors';
 import Stack from '@mui/material/Stack';
-import { Divider } from '@mui/material';
 
 export default function Contact() {
     return (
@@ -35,11 +34,11 @@ const baseStyle: React.CSSProperties = {
 interface ContactCardProps {
     style: React.CSSProperties;
     href: string;
-    displayText;
+    displayText: string;
 }
 function ContactCard(props: ContactCardProps) {
     return (
-        <a style={{ ...baseStyle, ...props.style, justifySelf: 'center'}} href={props.href}>
+        <a style={{ ...baseStyle, ...props.style, justifySelf: 'center' }} href={props.href}>
             {props.displayText}
         </a>
     )
