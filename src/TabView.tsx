@@ -15,10 +15,11 @@ export default function TabView() {
         fontSize: '1em',
     }
     const tabContentStyle: React.CSSProperties = {
-        backgroundColor: CUSTOM_WHITE,
         opacity: 0.9,
         color: CUSTOM_DARK_BLUE,
         fontSize: '1em',
+        display: 'grid',
+        position: 'relative'
     }
     const [selected, setSelected] = useState<number>(-1);
     return (
@@ -31,14 +32,33 @@ export default function TabView() {
                 </Stack>
             </Container>
             <Box sx={tabContentStyle}>
-                {
-                    {
-                        0: <History />,
-                        // 1: <Skills />,
-                        2: <Contact />
-                    }[selected]
-                }
+                <TabContent tabKey={0} selected={selected}>
+                    <History />
+                </TabContent>
+                <TabContent tabKey={2} selected={selected}>
+                    <Contact />
+                </TabContent>
             </Box>
         </Stack>
+    )
+}
+
+interface TabContentProps {
+    tabKey: number;
+    children: React.ReactNode;
+    selected: number;
+}
+function TabContent(props: TabContentProps) {
+    return (
+        <div
+            style={{
+                visibility: props.selected === props.tabKey ? 'visible' : 'hidden',
+                backgroundColor: CUSTOM_WHITE,
+                gridRow: 1, gridColumn: 1,
+                height: 'fit-content'
+            }}
+        >
+            {props.children}
+        </div>
     )
 }
