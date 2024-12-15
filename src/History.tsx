@@ -15,7 +15,7 @@ const textStyle: React.CSSProperties = {
 export default function History() {
     return (
         <div>
-            <Timeline sx={{justifyContent: 'left'}}>
+            <Timeline sx={{ justifyContent: 'left' }}>
                 <TimelineItem>
                     <TimelineOppositeContent style={textStyle}>
                         Winter 2025
