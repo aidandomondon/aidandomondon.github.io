@@ -18,7 +18,7 @@ export default function Contact() {
             <ContactCard
                 style={{ letterSpacing: '-0.13em' }}
                 href='m&#97;i&#108;to&#58;&#100;o%&#54;D%6&#70;n&#100;%6F%6&#69;%2E&#97;&#64;nor&#37;74h&#101;&#97;st%6&#53;&#114;n%2E&#101;du'
-                displayText='E&nbsp;-&nbsp;M&nbsp;a&nbsp;i&nbsp;l'
+                displayText='E&nbsp;-&nbsp;M&nbsp;a&nbsp;i&nbsp;l&nbsp;'
             />
             <ContactCard
                 style={{}}
@@ -40,7 +40,7 @@ interface ContactCardProps {
 function ContactCard(props: ContactCardProps) {
     return (
         <a style={{ ...baseStyle, ...props.style, justifySelf: 'center'}} href={props.href}>
-            <i>{props.displayText}</i>
+            {props.displayText}
         </a>
     )
 }
