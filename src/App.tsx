@@ -24,13 +24,11 @@ function App() {
   return (
     <ThemeProvider theme={globalMuiTheme}>
       <div className="App" style={topLevelDivStyle}>
-        <header className="App-header">
-          <Stack spacing={10}>
-            <TopBar />
-            <Preface />
-            <TabView />
-          </Stack>
-        </header>
+        <Stack spacing={10}>
+          <TopBar />
+          <Preface />
+          <TabView />
+        </Stack>
       </div>
     </ThemeProvider>
   );
