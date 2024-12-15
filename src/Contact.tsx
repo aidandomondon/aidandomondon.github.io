@@ -8,8 +8,7 @@ export default function Contact() {
         <Stack
             direction={'row'}
             spacing={10}
-            justifyContent={'center'}
-            divider={<Divider orientation={'vertical'} flexItem />}
+            justifyContent={'space-evenly'}
         >
             <ContactCard
                 style={{}}
@@ -40,8 +39,8 @@ interface ContactCardProps {
 }
 function ContactCard(props: ContactCardProps) {
     return (
-        <a style={{ ...baseStyle, ...props.style }} href={props.href}>
-            <i style={{ textOverflow: 'clip' }}>{props.displayText}</i>
+        <a style={{ ...baseStyle, ...props.style, justifySelf: 'center'}} href={props.href}>
+            <i>{props.displayText}</i>
         </a>
     )
 }
