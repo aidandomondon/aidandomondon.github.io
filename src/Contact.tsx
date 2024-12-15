@@ -1,19 +1,25 @@
 import React from 'react';
 import { CUSTOM_DARK_BLUE } from './colors';
 import Stack from '@mui/material/Stack';
+import { Divider } from '@mui/material';
 
 export default function Contact() {
     return (
-        <Stack direction={'row'} spacing={10} justifyContent={'center'}>
+        <Stack
+            direction={'row'}
+            spacing={10}
+            justifyContent={'center'}
+            divider={<Divider orientation={'vertical'} flexItem />}
+        >
             <ContactCard
                 style={{}}
                 href='https://www.linkedin.com/in/aidan-domondon'
                 displayText='LinkedIn'
             />
             <ContactCard
-                style={{letterSpacing: '-0.13em' }}
+                style={{ letterSpacing: '-0.13em' }}
                 href='m&#97;i&#108;to&#58;&#100;o%&#54;D%6&#70;n&#100;%6F%6&#69;%2E&#97;&#64;nor&#37;74h&#101;&#97;st%6&#53;&#114;n%2E&#101;du'
-                displayText='E - M a i l'
+                displayText='E&nbsp;-&nbsp;M&nbsp;a&nbsp;i&nbsp;l'
             />
             <ContactCard
                 style={{}}
@@ -34,8 +40,8 @@ interface ContactCardProps {
 }
 function ContactCard(props: ContactCardProps) {
     return (
-        <a style={{...baseStyle, ...props.style}} href={props.href}>
-            <i>{props.displayText}</i>
+        <a style={{ ...baseStyle, ...props.style }} href={props.href}>
+            <i style={{ textOverflow: 'clip' }}>{props.displayText}</i>
         </a>
     )
 }
