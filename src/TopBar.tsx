@@ -16,7 +16,7 @@ export default function TopBar(): React.ReactElement {
             <h1
                 style={{ fontSize: '3em', margin: -5 }}
             >
-                aidan domondon
+                aidan&nbsp;domondon
             </h1>
         </Container>
     )
