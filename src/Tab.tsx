@@ -61,12 +61,13 @@ export default function Tab(props: TabProps) {
         }
     }, [props.selected, props.tabKey, blurButtonColorScheme]);
 
-    function handleClick() {
+    function handleClick(event) {
         if (props.selected !== props.tabKey) {
             props.setSelected(props.tabKey);
         } else {
             props.setSelected(-1);
         }
+        event.target.scrollIntoView({behavior: 'smooth'})
     }
 
     return (
@@ -74,7 +75,7 @@ export default function Tab(props: TabProps) {
             style={buttonStyleObject(buttonColor)}
             onMouseOver={handleMouseOver}
             onMouseLeave={handleMouseLeave}
-            onClick={handleClick}
+            onClick={event => handleClick(event)}
         >
             <p style={buttonTextStyleObject(buttonTextColor)}>{props.label}</p>
         </div>
