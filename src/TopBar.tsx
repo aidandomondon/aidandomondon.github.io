@@ -6,7 +6,7 @@ export default function TopBar(): React.ReactElement {
     const style: React.CSSProperties = {
         // position: 'fixed',
         top: 0,
-        padding: '0.3em',
+        padding: '0.6em',
         // backgroundColor: 'white',
         opacity: 0.8,
         color: CUSTOM_DARK_BLUE,
