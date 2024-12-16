@@ -24,7 +24,7 @@ export default function TabView() {
     const [selected, setSelected] = useState<number>(-1);
     return (
         <Stack spacing={0}>
-            <Container sx={tabButtonBarStyle} maxWidth={false}>
+            <Container sx={tabButtonBarStyle} maxWidth={false} disableGutters={true}>
                 <Stack style={{ justifyContent: 'left' }} direction={'row'} padding={0}>
                     <Tab tabKey={0} label={'HISTORY'} selected={selected} setSelected={setSelected} />
                     {/* <Tab tabKey={1} label={'SKILLS'} selected={selected} setSelected={setSelected} /> */}
