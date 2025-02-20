@@ -6,7 +6,7 @@ import Stack from '@mui/material/Stack';
 import TabView from './TabView';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 
-const background_image = require('./ai_ml.png');
+const background_image = require('./ai_ml.webp');
 
 function App() {
 
