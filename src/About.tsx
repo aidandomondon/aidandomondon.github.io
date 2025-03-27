@@ -1,7 +1,6 @@
 import React from 'react';
 import { CUSTOM_DARK_BLUE } from './colors';
 import Stack from '@mui/material/Stack';
-import { Card } from '@mui/material';
 
 export default function About() {
     return (
@@ -10,7 +9,16 @@ export default function About() {
             spacing={5}
             justifyContent={'space-evenly'}
         >
-            <div style={{textAlign: 'left', padding: 20, borderRadius: 25, backgroundColor: 'rgb(255, 239, 64)', boxShadow: '0 0 15px'}}>
+            <div 
+                style={{
+                    textAlign: 'left', 
+                    paddingTop: 25, paddingBottom: 25,
+                    paddingLeft: 35, paddingRight: 35,
+                    borderRadius: 25, 
+                    backgroundColor: 'rgb(255, 239, 64)', 
+                    boxShadow: '0 0 15px'
+                }}
+            >
                 Dear Visitor,
                 <br/><br/>
                 Welcome to my personal website; I am Aidan.
