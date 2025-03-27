@@ -62,12 +62,14 @@ export default function Tab(props: TabProps) {
     }, [props.selected, props.tabKey, blurButtonColorScheme]);
 
     function handleClick(event) {
+        if (props.selected === -1) {
+            event.target.scrollIntoView({ behavior: 'smooth' })
+        }
         if (props.selected !== props.tabKey) {
             props.setSelected(props.tabKey);
         } else {
             props.setSelected(-1);
         }
-        event.target.scrollIntoView({behavior: 'smooth'})
     }
 
     return (

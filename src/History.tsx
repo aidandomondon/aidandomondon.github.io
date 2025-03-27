@@ -1,12 +1,7 @@
 import React from 'react';
-import Timeline from '@mui/lab/Timeline';
-import TimelineOppositeContent from '@mui/lab/TimelineOppositeContent';
-import TimelineSeparator from '@mui/lab/TimelineSeparator';
-import TimelineConnector from '@mui/lab/TimelineConnector';
-import TimelineContent from '@mui/lab/TimelineContent';
-import TimelineItem from '@mui/lab/TimelineItem';
-import TimelineDot from '@mui/lab/TimelineDot';
 import { CUSTOM_DARK_BLUE } from './colors'
+import { Stack } from '@mui/material';
+import HistoryItem from './HistoryItem';
 
 const textStyle: React.CSSProperties = {
     color: CUSTOM_DARK_BLUE,
@@ -14,59 +9,34 @@ const textStyle: React.CSSProperties = {
 };
 export default function History() {
     return (
-        <div>
-            <Timeline sx={{ justifyContent: 'left' }}>
-                <TimelineItem>
-                    <TimelineOppositeContent style={textStyle}>
-                        Winter 2025
-                    </TimelineOppositeContent>
-                    <TimelineSeparator>
-                        <TimelineDot />
-                        <TimelineConnector />
-                    </TimelineSeparator>
-                    <TimelineContent style={textStyle}>Last Semester @ Northeastern University</TimelineContent>
-                </TimelineItem>
-                <TimelineItem>
-                    <TimelineOppositeContent style={textStyle}>
-                        Fall 2024
-                    </TimelineOppositeContent>
-                    <TimelineSeparator>
-                        <TimelineDot />
-                        <TimelineConnector />
-                    </TimelineSeparator>
-                    <TimelineContent style={textStyle}>Data Analysis Consultant @ UCI MUST Lab</TimelineContent>
-                </TimelineItem>
-                <TimelineItem>
-                    <TimelineOppositeContent style={textStyle}>
-                        Winter 2024
-                    </TimelineOppositeContent>
-                    <TimelineSeparator>
-                        <TimelineDot />
-                        <TimelineConnector />
-                    </TimelineSeparator>
-                    <TimelineContent style={textStyle}>Data Science Co-op @ Northeastern University</TimelineContent>
-                </TimelineItem>
-                <TimelineItem>
-                    <TimelineOppositeContent style={textStyle}>
-                        Spring 2023
-                    </TimelineOppositeContent>
-                    <TimelineSeparator>
-                        <TimelineDot />
-                        <TimelineConnector />
-                    </TimelineSeparator>
-                    <TimelineContent style={textStyle}>Software Engineer Co-op @ New Age Micro, LLC.</TimelineContent>
-                </TimelineItem>
-                <TimelineItem>
-                    <TimelineOppositeContent style={textStyle}>
-                        Fall 2021
-                    </TimelineOppositeContent>
-                    <TimelineSeparator>
-                        <TimelineDot />
-                        <TimelineConnector />
-                    </TimelineSeparator>
-                    <TimelineContent style={textStyle}>First Semester @ Northeastern University</TimelineContent>
-                </TimelineItem>
-            </Timeline>
-        </div>
+        <Stack direction='column' alignItems='center' spacing={10}>
+            <HistoryItem 
+                time="Jan – May 2025" 
+                title="Research Assistant @ Northeastern University"
+                description={<p>Building software to automate mutation testing.</p>}
+            />
+
+            <HistoryItem 
+                time="Jan – Dec 2024" 
+                title="Data Scientist @ Northeastern University x UC Irvine"
+                description={
+                    <Stack direction='column'>
+                        <u>Works</u>
+                        <p>
+                            Arum, R., Mcdossi, O., Couts, F., Valencia Lopez, E. E., and Domondon, A. 2024.
+                            “Leveraging Institutional Data to Improve College-to-Career Transitions” Northeastern University (June 5).
+                        </p>
+                    </Stack>
+                }
+            />
+            
+            <HistoryItem 
+                time="Spring 2023" 
+                title="Software Engineer @ New Age Micro, LLC."
+                description={<p>Wrote 40+ end-to-end tests for a cryptographic key management web application.</p>}
+            />
+
+            
+        </Stack>
     );
 }

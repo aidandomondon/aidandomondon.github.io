@@ -1,13 +1,14 @@
 import React from 'react';
-import { CUSTOM_DARK_BLUE } from './colors';
+import { CUSTOM_DARK_BLUE, CUSTOM_WHITE } from './colors';
 import Stack from '@mui/material/Stack';
 
 export default function Contact() {
     return (
         <Stack
             direction={'row'}
-            spacing={10}
-            justifyContent={'space-evenly'}
+            spacing={5}
+            justifyContent='space-evenly'
+            alignItems='center'
         >
             <ContactCard
                 style={{}}
@@ -28,8 +29,12 @@ export default function Contact() {
     )
 }
 const baseStyle: React.CSSProperties = {
-    color: CUSTOM_DARK_BLUE,
+    color: CUSTOM_WHITE,
+    backgroundColor: CUSTOM_DARK_BLUE,
     padding: '2em',
+    alignContent: 'center',
+    aspectRatio: 1,
+    borderRadius: '50%'
 }
 interface ContactCardProps {
     style: React.CSSProperties;

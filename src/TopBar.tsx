@@ -8,7 +8,7 @@ export default function TopBar(): React.ReactElement {
         top: 0,
         padding: '0.6em',
         // backgroundColor: 'white',
-        opacity: 0.8,
+        opacity: 0.9,
         color: CUSTOM_DARK_BLUE,
     }
     return (
@@ -16,7 +16,7 @@ export default function TopBar(): React.ReactElement {
             <h1
                 style={{ fontSize: '3em', margin: -5 }}
             >
-                aidan&nbsp;domondon
+                Aidan&nbsp;Domondon
             </h1>
         </Container>
     )
