@@ -13,7 +13,7 @@ export default function History() {
             <HistoryItem 
                 time="Jan – May 2025" 
                 title="Research Assistant @ Northeastern University"
-                description={<p>Building software to automate mutation testing.</p>}
+                description={<p>Building software to automate mutation testing in JavaScript.</p>}
             />
 
             <HistoryItem 
@@ -21,6 +21,7 @@ export default function History() {
                 title="Data Scientist @ Northeastern University x UC Irvine"
                 description={
                     <Stack direction='column'>
+                        <p>Helped jumpstart a university initiative to collect and analyze data on student internship experiences.</p>
                         <u>Works</u>
                         <p>
                             Arum, R., Mcdossi, O., Couts, F., Valencia Lopez, E. E., and Domondon, A. 2024.
@@ -33,7 +34,7 @@ export default function History() {
             <HistoryItem 
                 time="Spring 2023" 
                 title="Software Engineer @ New Age Micro, LLC."
-                description={<p>Wrote 40+ end-to-end tests for a cryptographic key management web application.</p>}
+                description={<p>Wrote 40+ end-to-end tests for a web application that manages clients' cryptographic keys.</p>}
             />
 
             
