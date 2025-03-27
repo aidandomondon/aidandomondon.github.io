@@ -9,7 +9,7 @@ export default function TopBar(): React.ReactElement {
         padding: '0.6em',
         // backgroundColor: 'white',
         opacity: 0.9,
-        color: CUSTOM_DARK_BLUE,
+        color: 'rgb(182, 60, 60)'//'rgb(51, 51, 178)'// CUSTOM_DARK_BLUE,
     }
     return (
         <Container style={style} maxWidth={false}>

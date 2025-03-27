@@ -10,13 +10,15 @@ export default function About() {
             spacing={5}
             justifyContent={'space-evenly'}
         >
-            <Card elevation={3} style={{textAlign: 'left', padding: 20, borderRadius: 25}}>
+            <div style={{textAlign: 'left', padding: 20, borderRadius: 25, backgroundColor: 'rgb(255, 239, 64)', boxShadow: '0 0 15px'}}>
                 Dear Visitor,
                 <br/><br/>
                 Welcome to my personal website; I am Aidan.
-                I made this site to share a bit about myself– professionally and in general.
+                <br/><br/>
+                I made this site to share a bit about myself.
                 <ul>
                     <li>For a chronological history of my professional engagements, see the tab labeled “HISTORY”.</li>
+                    <br/>
                     <li>To contact me, please reach out via one of the modes linked on the tab labeled “CONTACT”.</li>
                 </ul>
                 I also make YouTube videos about interesting topics in math. 
@@ -27,7 +29,7 @@ export default function About() {
                 <br/>
                 Aidan
                 </div>
-            </Card>
+            </div>
             <iframe 
                 className='video'
                 title='Youtube player'
@@ -35,7 +37,7 @@ export default function About() {
                 src={`https://youtube.com/embed/-M197_U-e3w?modestbranding=1`}
                 height='500'
                 width='max-content'
-                style={{borderRadius: 25}}
+                style={{borderRadius: 25, boxShadow: '0 0 15px'}}
             >
             </iframe>
         </Stack >
