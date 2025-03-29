@@ -20,7 +20,7 @@ export default function WorkExperience() {
   >
     <TimelineItem>
       <TimelineSeparator>
-        <TimelineDot />
+        <TimelineDot color='secondary'/>
         <TimelineConnector />
       </TimelineSeparator>
       <TimelineContent>
@@ -35,7 +35,7 @@ export default function WorkExperience() {
     </TimelineItem>
     <TimelineItem>
       <TimelineSeparator>
-        <TimelineDot />
+        <TimelineDot color='secondary'/>
         <TimelineConnector />
       </TimelineSeparator>
       <TimelineContent>
@@ -58,7 +58,7 @@ export default function WorkExperience() {
     </TimelineItem>
     <TimelineItem>
       <TimelineSeparator>
-        <TimelineDot />
+        <TimelineDot color='secondary'/>
       </TimelineSeparator>
       <TimelineContent>
         <Paper>

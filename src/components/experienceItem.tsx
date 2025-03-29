@@ -15,7 +15,7 @@ const Item = styled(Box)(({ theme }) => ({
   ...theme.typography.body2,
   padding: theme.spacing(1),
   textAlign: 'center',
-  color: (theme).palette.text.secondary,
+  color: (theme).palette.text.primary,
   ...theme.applyStyles('dark', {
     backgroundColor: '#1A2027',
   }),
@@ -36,8 +36,8 @@ export default function ExperienceItem(props: ExperienceItemProps) {
   return <Box sx={{ width: '100%' }}>
     <Stack>
       <Item><Stack spacing={2} direction='row'>
-        <HeadingItem>{props.time}</HeadingItem>
-        <HeadingItem>{props.title}</HeadingItem>
+        <HeadingItem><b>{props.time}</b></HeadingItem>
+        <HeadingItem><b>{props.title}</b></HeadingItem>
       </Stack></Item>
       <Item>
         {props.content}
