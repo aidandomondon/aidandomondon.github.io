@@ -18,6 +18,8 @@ export default function Preface(): React.ReactElement {
             <p style={{textShadow: '1px 2px 2px rgba(0, 0, 0, 0.20)', marginLeft: -3, marginTop: -3, marginBottom: -1.5}}>
                 Software engineer,
                 <br/>
+                Data scientist,
+                <br/>
                 Amateur mathematician
             </p>
         </Container>
