@@ -3,30 +3,53 @@ import Stack from '@mui/material/Stack';
 
 export default function Projects() {
     return (
-        <Stack textAlign='left'>
+        <Stack
+            textAlign='left'
+        >
             <h2>Around The World</h2>
             <p>
                 <i>Around The World</i> was a website that allowed visitors 
                 to find the point on the other side of the globe 
                 directly beneath them (known as their <i>antipode</i>). 
-                <br/>
-                <br/>
+            </p>
+            <br/>
+            <img style={{'filter': 'drop-shadow(0 0 0.75rem black)', 'maxWidth': '100%', 'maxHeight': '100%'}} src='AroundTheWorldHomepage.png'></img>
+            <br/>
+            <p>
                 The goal was to encourage visitors to consider the question: <i>what is happening below me at this
                 very moment?</i>
-                <br/>
-                <br/>
+            </p>
+            <p>
                 To this end, it displayed the local weather and time,
                 as well as short snippets about nearby attractions (taken from nearby Wikipedia
                 entries).
-                <br/>
-                <br/>
+            </p>
+            <br/>
+            <img style={{'filter': 'drop-shadow(0 0 0.75rem black)'}} src='AroundTheWorldDetails.png'></img>
+            <br/>
+            <p>
                 Complimenting this all was a working counter of how many people within a 20 km radius 
                 of their antipode had visited the website.
-                <br/>
-                <br/>
-                In April 2025, I had to take Around the World down due to
-                operating costs (mostly AWS).
             </p>
+            <br/>
+            <img style={{'filter': 'drop-shadow(0 0 0.75rem black)'}} src='AroundTheWorldCheckIns.png'></img>
+            <br/>
+            <p>
+                In April 2025, I had to take Around the World down due to
+                operating costs. The website was served to the public by hosting it on an AWS EC2 instance.
+                <br/>
+                <br/>
+                The check-in counter was made possible with AWS Lambdas...
+            </p> 
+            <br/>
+            <img style={{'filter': 'drop-shadow(0 0 0.75rem black)'}} src='AroundTheWorldLambdas.png'></img>
+            <br/>
+            <p>
+                ... and an AWS S3 bucket.
+            </p>
+            <br/>
+            <img style={{'filter': 'drop-shadow(0 0 0.75rem black)'}} src='AroundTheWorldS3.png'></img>
+            <br/>
         </Stack>
     )
 }
