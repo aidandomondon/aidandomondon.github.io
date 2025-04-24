@@ -21,9 +21,8 @@ export default function About() {
             >
                 Dear Visitor,
                 <br/><br/>
-                Welcome to my personal website; I am Aidan.
-                <br/><br/>
-                I made this site to share a bit about myself.
+                Welcome to my personal website.
+                I made it to share a bit about myself.
                 <ul>
                     <li>For a chronological history of my professional engagements, see the tab labeled “HISTORY”.</li>
                     <br/>
