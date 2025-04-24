@@ -4,7 +4,7 @@ import Tab from './Tab';
 import { Stack, Box } from '@mui/material';
 import { CUSTOM_DARK_BLUE, CUSTOM_WHITE } from './colors';
 import History from './History';
-import Skills from './Skills';
+import Projects from './Projects';
 import Contact from './Contact';
 import About from './About';
 
@@ -28,7 +28,7 @@ export default function TabView() {
             <Container sx={tabButtonBarStyle} maxWidth={false} disableGutters={true}>
                 <Stack style={{ justifyContent: 'left' }} direction={'row'} padding={0}>
                     <Tab tabKey={0} label={'HISTORY'} selected={selected} setSelected={setSelected} />
-                    {/* <Tab tabKey={1} label={'SKILLS'} selected={selected} setSelected={setSelected} /> */}
+                    <Tab tabKey={1} label={'PROJECTS'} selected={selected} setSelected={setSelected} />
                     <Tab tabKey={2} label={'ABOUT'} selected={selected} setSelected={setSelected} />
                     <Tab tabKey={3} label={'CONTACT'} selected={selected} setSelected={setSelected} />
                 </Stack>
@@ -37,8 +37,11 @@ export default function TabView() {
                 <TabContent tabKey={0} selected={selected}>
                     <History />
                 </TabContent>
+                <TabContent tabKey={1} selected={selected}>
+                    <Projects />
+                </TabContent>
                 <TabContent tabKey={2} selected={selected}>
-                    <About/>
+                    <About />
                 </TabContent>
                 <TabContent tabKey={3} selected={selected}>
                     <Contact />
