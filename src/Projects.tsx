@@ -6,6 +6,23 @@ export default function Projects() {
         <Stack
             textAlign='left'
         >
+            <h2>Tarragon</h2>
+            <p>
+                Tarragon is an <i>offline</i>, desktop application to which users can upload sensitive, private documents,
+                and communicate with a chatbot that can answer questions, citing
+                specific facts taken from the documents. 
+            </p>
+            <br/>
+            <img style={{'filter': 'drop-shadow(0 0 0.75rem black)', 'maxWidth': '100%', 'maxHeight': '100%'}} src='TarragonUpload.png'></img>
+            <br/>
+            <p>
+                Users have full ownership over their data, and can completely wipe the application 
+                and chatbot's memory, empowering them with complete control over their data.
+            </p>
+            <br/>
+            <img style={{'filter': 'drop-shadow(0 0 0.75rem black)', 'maxWidth': '100%', 'maxHeight': '100%'}} src='TarragonWipe.png'></img>
+            <br/>
+
             <h2>Around The World</h2>
             <p>
                 <i>Around The World</i> was a website that allowed visitors 
@@ -25,14 +42,14 @@ export default function Projects() {
                 entries).
             </p>
             <br/>
-            <img style={{'filter': 'drop-shadow(0 0 0.75rem black)'}} src='AroundTheWorldDetails.png'></img>
+            <img style={{'filter': 'drop-shadow(0 0 0.75rem black)', 'maxWidth': '100%', 'maxHeight': '100%'}} src='AroundTheWorldDetails.png'></img>
             <br/>
             <p>
                 Complimenting this all was a working counter of how many people within a 20 km radius 
                 of their antipode had visited the website.
             </p>
             <br/>
-            <img style={{'filter': 'drop-shadow(0 0 0.75rem black)'}} src='AroundTheWorldCheckIns.png'></img>
+            <img style={{'filter': 'drop-shadow(0 0 0.75rem black)', 'maxWidth': '100%', 'maxHeight': '100%'}} src='AroundTheWorldCheckIns.png'></img>
             <br/>
             <p>
                 In April 2025, I had to take Around the World down due to
@@ -42,13 +59,13 @@ export default function Projects() {
                 The check-in counter was made possible with AWS Lambdas...
             </p> 
             <br/>
-            <img style={{'filter': 'drop-shadow(0 0 0.75rem black)'}} src='AroundTheWorldLambdas.png'></img>
+            <img style={{'filter': 'drop-shadow(0 0 0.75rem black)', 'maxWidth': '100%', 'maxHeight': '100%'}} src='AroundTheWorldLambdas.png'></img>
             <br/>
             <p>
                 ... and an AWS S3 bucket.
             </p>
             <br/>
-            <img style={{'filter': 'drop-shadow(0 0 0.75rem black)'}} src='AroundTheWorldS3.png'></img>
+            <img style={{'filter': 'drop-shadow(0 0 0.75rem black)', 'maxWidth': '100%', 'maxHeight': '100%'}} src='AroundTheWorldS3.png'></img>
             <br/>
         </Stack>
     )
