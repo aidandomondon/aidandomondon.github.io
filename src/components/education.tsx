@@ -6,8 +6,8 @@ import SchoolIcon from '@mui/icons-material/School';
 
 export default function Education() {
     return (<Stack direction='column' alignItems='start' alignContent='center'>
-        <Stack direction='row' spacing={1}>
-            <SchoolIcon/>
+        <Stack direction='row' spacing={1} alignItems='center'>
+            <SchoolIcon fontSize='large' />
         <Typography variant='body1' align='left'>Education</Typography>
         </Stack>
         <List sx={{ listStyleType: 'disc', pl: 4 }}>

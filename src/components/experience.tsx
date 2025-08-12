@@ -6,8 +6,8 @@ import BusinessCenterIcon from '@mui/icons-material/BusinessCenter';
 
 export default function Experience() {
     return (<Stack direction='column' alignItems='start'>
-        <Stack direction='row' spacing={1}>
-            <BusinessCenterIcon />
+        <Stack direction='row' spacing={1} alignItems='center'>
+            <BusinessCenterIcon fontSize='large' />
             <Typography variant='body1' align='left'>Work Experience</Typography>
         </Stack>
         <List sx={{ listStyleType: 'disc', pl: 4 }}>
@@ -18,7 +18,7 @@ export default function Experience() {
             </ListItemText>
             <ListItemText sx={{ display: 'list-item' }}>
                 <Typography variant='body2' align='left'>
-                    <b>Jan 2024 – Dec 2025</b> • <i>Data Science Co-op</i> • UC Irvine x Northeastern University
+                    <b>Jan 2024 – Jan 2025</b> • <i>Data Science Co-op</i> • UC Irvine x Northeastern University
                 </Typography>
             </ListItemText>
             <ListItemText sx={{ display: 'list-item' }}>

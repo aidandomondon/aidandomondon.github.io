@@ -4,7 +4,6 @@ import TimelineSeparator from '@mui/lab/TimelineSeparator';
 import TimelineConnector from '@mui/lab/TimelineConnector';
 import TimelineContent from '@mui/lab/TimelineContent';
 import TimelineDot from '@mui/lab/TimelineDot';
-import * as React from 'react';
 import ExperienceItem from './experienceItem';
 import Stack from '@mui/material/Stack';
 import Paper from '@mui/material/Paper';

@@ -1,32 +1,23 @@
-import { Stack } from "@mui/material";
-import About from "./about";
+import { Stack, useTheme } from "@mui/material";
 import Projects from "./projects";
 import Experience from "./experience";
 import Education from "./education";
-import TabsContainer from "./tabs";
 import { Typography } from "@mui/material";
 
 export default function Body() {
+    const theme = useTheme();
     return (
-        <Stack
-            spacing={10}
-            direction='row'
-            alignItems='center'
-            sx={{ marginLeft: '2em', marginRight: '2em' }}
-        >
-            <About></About>
-            {/* <TabsContainer></TabsContainer> */}
-            <Stack direction='column' spacing={3}>
-                <Typography variant='body1' align='left'>
-                    <b>Aidan Domondon</b>
-                    &nbsp;is a software developer and graduate researcher at Northeastern University.
-                    &nbsp;He has a passion for building impactful technology.
-                </Typography>
-                <Typography variant='body1' align='left'>Overview</Typography>
-                <Projects />
-                <Experience />
-                <Education />
-            </Stack>
+        <Stack direction='column' spacing={3} marginRight='25%'>
+            <Typography variant='body1' align='left'>
+                <Typography display='inline' sx={{
+                    background: `linear-gradient(45deg, ${theme.palette.secondary.main} 30%, ${theme.palette.primary.main} 90%)`,
+                    WebkitBackgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent',
+                }}>Aidan Domondon</Typography> is a software developer and graduate researcher at Northeastern University. He has a passion for building impactful technology.
+            </Typography>
+            <Projects />
+            <Experience />
+            <Education />
         </Stack>
     );
 }
