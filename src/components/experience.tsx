@@ -8,7 +8,7 @@ export default function Experience() {
     return (<Stack direction='column' alignItems='start'>
         <Stack direction='row' spacing={1} alignItems='center'>
             <BusinessCenterIcon fontSize='large' />
-            <Typography variant='body1' align='left'>Work Experience</Typography>
+            <Typography variant='body1' align='left'>Experience</Typography>
         </Stack>
         <List sx={{ listStyleType: 'disc', pl: 4 }}>
             <ListItemText sx={{ display: 'list-item' }}>
