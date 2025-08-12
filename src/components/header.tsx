@@ -11,7 +11,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 export default function Header() {
   return (
     <React.Fragment>
-      <AppBar position="fixed" color="primary" sx={{ top: 'auto', bottom: 0 }}>
+      <AppBar position="fixed" color="primary" sx={{ top: 0 }}>
         <Toolbar>
           <Typography variant="h5">
             Aidan Domondon

@@ -6,6 +6,7 @@ import TabsContainer from './components/tabs';
 import Container from '@mui/material/Container';
 import About from './components/about';
 import Copyright from './components/copyright';
+import Body from './components/body';
 
 function App() {
 
@@ -24,7 +25,7 @@ function App() {
       }
     },
     typography: {
-      fontFamily: 'serif',
+      fontFamily: 'sans-serif',
       body1: {
         fontSize: 20
       },
@@ -36,12 +37,11 @@ function App() {
 
   return (
     <ThemeProvider theme={globalMuiTheme}>
-      <div className="App">
-        <Container style={{marginTop: '5%'}}>
-          <About></About>
-          <TabsContainer></TabsContainer>
-          <Copyright></Copyright>
-          <Header></Header>
+      <div className="App" style={{ width: '100%' }}>
+        <Container style={{ marginTop: '10%', marginBottom: '10%', width: '100%' }}>
+          <Header />
+          <Body />
+          <Copyright />
         </Container>
       </div>
     </ThemeProvider>

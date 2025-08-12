@@ -3,6 +3,7 @@ import Stack from '@mui/material/Stack';
 import { styled } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
 import * as React from 'react';
+import { AppBar, Toolbar } from '@mui/material';
 
 const Item = styled(Box)(({ theme }) => ({
   backgroundColor: '#fff',
@@ -16,9 +17,12 @@ const Item = styled(Box)(({ theme }) => ({
 }));
 
 export default function Copyright() {
-  return <Stack direction='row'>
-    <Item><Typography variant='caption'>© 2025 Aidan Domondon</Typography></Item>
-    <Item><Box sx={{ flexGrow: 1 }} /></Item>
-    <Item><Typography variant='caption'>Website by <a href='https://github.com/AnanyaT129'>Ananya Tadigadapa</a></Typography></Item>
-  </Stack>
+  return (
+    <AppBar position="fixed" sx={{ top: 'auto', bottom: 0, width: '100%' }}>
+      <Stack position="fixed" direction='row' sx={{ bottom: 0, width: '100vw' }}>
+        <Item><Typography variant='caption'>© 2025 Aidan Domondon</Typography></Item>
+        <Item><Box sx={{ flexGrow: 1 }} /></Item>
+      </Stack>
+    </AppBar>
+  )
 }
