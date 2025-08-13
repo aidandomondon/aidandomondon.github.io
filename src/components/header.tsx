@@ -19,11 +19,11 @@ export default function Header() {
             Aidan Domondon
           </Typography>
           <Box sx={{ flexGrow: 1 }} />
+          <IconButton color="inherit" onClick={e => window.open('/AidanMDomondonResume.pdf', '_blank')}>
+              <h5 style={{ marginTop: 0, marginBottom: 0 }}>CV</h5>
+          </IconButton>
           <IconButton color="inherit" href='https://www.linkedin.com/in/aidan-domondon'>
             <LinkedInIcon />
-          </IconButton>
-          <IconButton color="inherit">
-            <EmailIcon href='m&#97;i&#108;to&#58;&#100;o%&#54;D%6&#70;n&#100;%6F%6&#69;%2E&#97;&#64;nor&#37;74h&#101;&#97;st%6&#53;&#114;n%2E&#101;du' />
           </IconButton>
           <IconButton color="inherit" href='https://github.com/aidandomondon'>
             <GitHubIcon />
