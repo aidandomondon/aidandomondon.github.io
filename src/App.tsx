@@ -39,7 +39,7 @@ function App() {
     <ThemeProvider theme={globalMuiTheme}>
       <CssBaseline />
       <Box className="App" sx={{ width: '100%', backgroundImage: `url(large-background.png)` }}>
-        <Container sx={{ marginTop: '10%', marginBottom: '10%', width: '100%' }}>
+        <Container sx={{ marginTop: '5rem', width: '100%' }}>
           <Header />
           <Body />
           <Copyright />
