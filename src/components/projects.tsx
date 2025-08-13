@@ -53,7 +53,7 @@ export default function Projects() {
           cardActions={(
             <CardActions>
               <Tooltip title="Launch Site">
-                <IconButton color="inherit" href='https:comebacksunday.pythonanywhere.com'>
+                <IconButton color="inherit" href='https://comebacksunday.pythonanywhere.com'>
                   <LaunchIcon/>
                 </IconButton>
               </Tooltip>
