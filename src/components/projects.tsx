@@ -3,7 +3,7 @@ import { CardActions, CardContent } from '@mui/material';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import ConstructionIcon from '@mui/icons-material/Construction';
-import { IconButton } from '@mui/material';
+import { IconButton, Tooltip } from '@mui/material';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LaunchIcon from '@mui/icons-material/Launch';
 import { ReactNode } from 'react';
@@ -52,12 +52,16 @@ export default function Projects() {
           description="Mental-health-conscious social media app"
           cardActions={(
             <CardActions>
-              <IconButton color="inherit" href='https:comebacksunday.pythonanywhere.com'>
-                <LaunchIcon/>
-              </IconButton>
-              <IconButton color="inherit" href='https://github.com/aidandomondon/comebacksunday'>
-                <GitHubIcon/>
-              </IconButton>
+              <Tooltip title="Launch Site">
+                <IconButton color="inherit" href='https:comebacksunday.pythonanywhere.com'>
+                  <LaunchIcon/>
+                </IconButton>
+              </Tooltip>
+              <Tooltip title="Visit GitHub">
+                <IconButton color="inherit" href='https://github.com/aidandomondon/comebacksunday'>
+                  <GitHubIcon/>
+                </IconButton>
+              </Tooltip>
             </CardActions>
           )}
         />
@@ -66,9 +70,11 @@ export default function Projects() {
           description="Privacy-focused, offline chatbot that reasons over users' documents"
           cardActions={(
             <CardActions>
-              <IconButton color="inherit" href='https://github.com/aidandomondon/tarragon'>
-                <GitHubIcon/>
-              </IconButton>
+              <Tooltip title="Visit GitHub">
+                <IconButton color="inherit" href='https://github.com/aidandomondon/tarragon'>
+                  <GitHubIcon/>
+                </IconButton>
+              </Tooltip>
             </CardActions>
           )}
         />

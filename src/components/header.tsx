@@ -7,7 +7,7 @@ import IconButton from '@mui/material/IconButton';
 import EmailIcon from '@mui/icons-material/Email';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import { useTheme } from '@mui/material';
+import { useTheme, Tooltip } from '@mui/material';
 
 export default function Header() {
   const theme = useTheme();
@@ -19,15 +19,21 @@ export default function Header() {
             Aidan Domondon
           </Typography>
           <Box sx={{ flexGrow: 1 }} />
-          <IconButton color="inherit" onClick={e => window.open('/AidanMDomondonResume.pdf', '_blank')}>
-              <h5 style={{ marginTop: 0, marginBottom: 0 }}>CV</h5>
-          </IconButton>
-          <IconButton color="inherit" href='https://www.linkedin.com/in/aidan-domondon'>
-            <LinkedInIcon />
-          </IconButton>
-          <IconButton color="inherit" href='https://github.com/aidandomondon'>
-            <GitHubIcon />
-          </IconButton>
+          <Tooltip title="Open CV in new tab">
+            <IconButton color="inherit" onClick={e => window.open('/AidanMDomondonResume.pdf', '_blank')}>
+                <h5 style={{ marginTop: 0, marginBottom: 0 }}>CV</h5>
+            </IconButton>
+          </Tooltip>
+          <Tooltip title="LinkedIn">
+            <IconButton color="inherit" href='https://www.linkedin.com/in/aidan-domondon'>
+              <LinkedInIcon />
+            </IconButton>
+          </Tooltip>
+          <Tooltip title="GitHub">
+            <IconButton color="inherit" href='https://github.com/aidandomondon'>
+              <GitHubIcon />
+            </IconButton>
+          </Tooltip>
         </Toolbar>
       </AppBar>
     </React.Fragment>
